@@ -1,0 +1,15 @@
+//
+//  User.swift
+//  Diario
+//
+//  Created by fernando rossetti on 3/8/17.
+//  Copyright © 2017 fernando rossetti. All rights reserved.
+//
+
+import Foundation
+import CoreData
+
+@objc(User)
+class User: NSManagedObject {
+    
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="16C67" minimumToolsVersion="Automatic">
+    <entity name="Momento" representedClassName="Momento" syncable="YES">
+        <attribute name="about" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="subject" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="momentos" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="birth_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="email" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <relationship name="momentos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Momento" inverseName="user" inverseEntity="Momento" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Momento" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>
